@@ -1,0 +1,12 @@
+﻿CCTV01=rtsp://admin:zzz12569@192.168.1.1:554/MPEG-4/ch1/main/av_stream
+CCTV02=rtsp://admin:zzz12569@192.168.1.1:554/MPEG-4/ch1/main/av_stream
+CCTV03=rtsp://admin:zzz12569@192.168.1.1:554/MPEG-4/ch1/main/av_stream
+CCTV04=rtsp://admin:zzz12569@192.168.1.1:554/MPEG-4/ch1/main/av_stream
+CCTV05=rtsp://admin:zzz12569@192.168.1.1:554/MPEG-4/ch1/main/av_stream
+CCTV06=rtsp://admin:zzz12569@192.168.1.1:554/MPEG-4/ch1/main/av_stream
+CCTV07=rtsp://admin:zzz12569@192.168.1.1:554/MPEG-4/ch1/main/av_stream
+CCTV08=rtsp://admin:zzz12569@192.168.1.1:554/MPEG-4/ch1/main/av_stream
+CCTV09=rtsp://admin:zzz12569@192.168.1.1:554/MPEG-4/ch1/main/av_stream
+CCTV10=rtsp://admin:zzz12569@192.168.1.1:554/MPEG-4/ch1/main/av_stream
+CCTV11=rtsp://admin:zzz12569@192.168.1.1:554/MPEG-4/ch1/main/av_stream
+CCTV12=rtsp://admin:zzz12569@192.168.1.1:554/MPEG-4/ch1/main/av_stream

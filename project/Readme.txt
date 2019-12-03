@@ -1,0 +1,5 @@
+config.txt文件配置说明：
+
+WeatherInfoUrl：天气接口
+GetAllGateInfoUrl：获取所有航班信息接口
+GetFlightByGateIDUrl：通过ID获取航班信息接口

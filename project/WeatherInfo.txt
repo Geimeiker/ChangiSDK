@@ -1,0 +1,1241 @@
+{
+
+    "message": "ok",
+
+    "result": {
+
+        "data": [
+
+            {
+
+                "info": {
+
+                    "rainfall": 0,
+
+                    "station_name": "Admiralty Road West",
+
+                    "station_device_id": "S105",
+
+                    "station_id": "S105"
+
+                },
+
+                "data_unit": "mm",
+
+                "data_type": "TB1 Rainfall 5 Minute Total F",
+
+                "location_label": "ADMIRALTY ROAD WEST",
+
+                "long": 103.79525,
+
+                "lat": 1.45817
+
+            },
+
+            {
+
+                "info": {
+
+                    "rainfall": 0,
+
+                    "station_name": "Alexandra Road",
+
+                    "station_device_id": "S77",
+
+                    "station_id": "S77"
+
+                },
+
+                "data_unit": "mm",
+
+                "data_type": "TB1 Rainfall 5 Minute Total F",
+
+                "location_label": "ALEXANDRA ROAD",
+
+                "long": 103.8125,
+
+                "lat": 1.2937
+
+            },
+
+            {
+
+                "info": {
+
+                    "rainfall": 60,
+
+                    "station_name": "Ang Mo Kio Avenue 5",
+
+                    "station_device_id": "S109",
+
+                    "station_id": "S109"
+
+                },
+
+                "data_unit": "mm",
+
+                "data_type": "TB1 Rainfall 5 Minute Total F",
+
+                "location_label": "ANG MO KIO AVENUE 5",
+
+                "long": 103.8492,
+
+                "lat": 1.3764
+
+            },
+
+            {
+
+                "info": {
+
+                    "rainfall": 0,
+
+                    "station_name": "Banyan Road",
+
+                    "station_device_id": "S117",
+
+                    "station_id": "S117"
+
+                },
+
+                "data_unit": "mm",
+
+                "data_type": "TB1 Rainfall 5 Minute Total F",
+
+                "location_label": "BANYAN ROAD",
+
+                "long": 103.679,
+
+                "lat": 1.256
+
+            },
+
+            {
+
+                "info": {
+
+                    "rainfall": 90,
+
+                    "station_name": "Bukit Panjang Road",
+
+                    "station_device_id": "S64",
+
+                    "station_id": "S64"
+
+                },
+
+                "data_unit": "mm",
+
+                "data_type": "TB1 Rainfall 5 Minute Total F",
+
+                "location_label": "BUKIT PANJANG ROAD",
+
+                "long": 103.7603,
+
+                "lat": 1.3824
+
+            },
+
+            {
+
+                "info": {
+
+                    "rainfall": 90,
+
+                    "station_name": "Bukit Timah Road",
+
+                    "station_device_id": "S90",
+
+                    "station_id": "S90"
+
+                },
+
+                "data_unit": "mm",
+
+                "data_type": "TB1 Rainfall 5 Minute Total F",
+
+                "location_label": "BUKIT TIMAH ROAD",
+
+                "long": 103.8191,
+
+                "lat": 1.3191
+
+            },
+
+            {
+
+                "info": {
+
+                    "rainfall": 250,
+
+                    "station_name": "Chai Chee Street",
+
+                    "station_device_id": "S61",
+
+                    "station_id": "S61"
+
+                },
+
+                "data_unit": "mm",
+
+                "data_type": "TB1 Rainfall 5 Minute Total F",
+
+                "location_label": "CHAI CHEE STREET",
+
+                "long": 103.9217,
+
+                "lat": 1.323
+
+            },
+
+            {
+
+                "info": {
+
+                    "rainfall": 90,
+
+                    "station_name": "Choa Chu Kang Road",
+
+                    "station_device_id": "S11",
+
+                    "station_id": "S11"
+
+                },
+
+                "data_unit": "mm",
+
+                "data_type": "TB1 Rainfall 5 Minute Total F",
+
+                "location_label": "CHOA CHU KANG ROAD",
+
+                "long": 103.6938,
+
+                "lat": 1.3746
+
+            },
+
+            {
+
+                "info": {
+
+                    "rainfall": 90,
+
+                    "station_name": "Clementi Road",
+
+                    "station_device_id": "S50",
+
+                    "station_id": "S50"
+
+                },
+
+                "data_unit": "mm",
+
+                "data_type": "TB1 Rainfall 5 Minute Total F",
+
+                "location_label": "CLEMENTI ROAD",
+
+                "long": 103.7768,
+
+                "lat": 1.3337
+
+            },
+
+            {
+
+                "info": {
+
+                    "rainfall": 90,
+
+                    "station_name": "East Coast Parkway",
+
+                    "station_device_id": "S107",
+
+                    "station_id": "S107"
+
+                },
+
+                "data_unit": "mm",
+
+                "data_type": "TB1 Rainfall 5 Minute Total F",
+
+                "location_label": "EAST COAST PARKWAY",
+
+                "long": 103.9625,
+
+                "lat": 1.3135
+
+            },
+
+            {
+
+                "info": {
+
+                    "rainfall": 90,
+
+                    "station_name": "GEYLANG EAST CENTRAL",
+
+                    "station_device_id": "S215",
+
+                    "station_id": "S215"
+
+                },
+
+                "data_unit": "mm",
+
+                "data_type": "TB1 Rainfall 5 Minute Total F",
+
+                "location_label": "GEYLANG EAST CENTRAL",
+
+                "long": 103.88899,
+
+                "lat": 1.32785
+
+            },
+
+            {
+
+                "info": {
+
+                    "rainfall": 0,
+
+                    "station_name": "Handy Road",
+
+                    "station_device_id": "S118",
+
+                    "station_id": "S118"
+
+                },
+
+                "data_unit": "mm",
+
+                "data_type": "TB1 Rainfall 5 Minute Total F",
+
+                "location_label": "HANDY ROAD",
+
+                "long": 103.8461,
+
+                "lat": 1.2994
+
+            },
+
+            {
+
+                "info": {
+
+                    "rainfall": 90,
+
+                    "station_name": "Holland Road",
+
+                    "station_device_id": "S120",
+
+                    "station_id": "S120"
+
+                },
+
+                "data_unit": "mm",
+
+                "data_type": "TB1 Rainfall 5 Minute Total F",
+
+                "location_label": "HOLLAND ROAD",
+
+                "long": 103.818,
+
+                "lat": 1.30874
+
+            },
+
+            {
+
+                "info": {
+
+                    "rainfall": 90,
+
+                    "station_name": "Jurong Pier Road",
+
+                    "station_device_id": "S33",
+
+                    "station_id": "S33"
+
+                },
+
+                "data_unit": "mm",
+
+                "data_type": "TB1 Rainfall 5 Minute Total F",
+
+                "location_label": "JURONG PIER ROAD",
+
+                "long": 103.71,
+
+                "lat": 1.3081
+
+            },
+
+            {
+
+                "info": {
+
+                    "rainfall": 90,
+
+                    "station_name": "Kim Chuan Road",
+
+                    "station_device_id": "S43",
+
+                    "station_id": "S43"
+
+                },
+
+                "data_unit": "mm",
+
+                "data_type": "TB1 Rainfall 5 Minute Total F",
+
+                "location_label": "KIM CHUAN ROAD",
+
+                "long": 103.8878,
+
+                "lat": 1.3399
+
+            },
+
+            {
+
+                "info": {
+
+                    "rainfall": 90,
+
+                    "station_name": "Kranji Way",
+
+                    "station_device_id": "S66",
+
+                    "station_id": "S66"
+
+                },
+
+                "data_unit": "mm",
+
+                "data_type": "TB1 Rainfall 5 Minute Total F",
+
+                "location_label": "KRANJI WAY",
+
+                "long": 103.7363,
+
+                "lat": 1.4387
+
+            },
+
+            {
+
+                "info": {
+
+                    "rainfall": 90,
+
+                    "station_name": "Lim Chu Kang Road",
+
+                    "station_device_id": "S112",
+
+                    "station_id": "S112"
+
+                },
+
+                "data_unit": "mm",
+
+                "data_type": "TB1 Rainfall 5 Minute Total F",
+
+                "location_label": "LIM CHU KANG ROAD",
+
+                "long": 103.70131,
+
+                "lat": 1.43854
+
+            },
+
+            {
+
+                "info": {
+
+                    "rainfall": 0,
+
+                    "station_name": "Lornie Road",
+
+                    "station_device_id": "S07",
+
+                    "station_id": "S07"
+
+                },
+
+                "data_unit": "mm",
+
+                "data_type": "TB1 Rainfall 5 Minute Total F",
+
+                "location_label": "LORNIE ROAD",
+
+                "long": 103.8334,
+
+                "lat": 1.3415
+
+            },
+
+            {
+
+                "info": {
+
+                    "rainfall": 90,
+
+                    "station_name": "Mandai Lake Road",
+
+                    "station_device_id": "S40",
+
+                    "station_id": "S40"
+
+                },
+
+                "data_unit": "mm",
+
+                "data_type": "TB1 Rainfall 5 Minute Total F",
+
+                "location_label": "MANDAI LAKE ROAD",
+
+                "long": 103.78962,
+
+                "lat": 1.4044
+
+            },
+
+            {
+
+                "info": {
+
+                    "rainfall": 90,
+
+                    "station_name": "Marina Gardens Drive",
+
+                    "station_device_id": "S108",
+
+                    "station_id": "S108"
+
+                },
+
+                "data_unit": "mm",
+
+                "data_type": "TB1 Rainfall 5 Minute Total F",
+
+                "location_label": "MARINA GARDENS DRIVE",
+
+                "long": 103.8703,
+
+                "lat": 1.2799
+
+            },
+
+            {
+
+                "info": {
+
+                    "rainfall": 0,
+
+                    "station_name": "Marine Parade Road",
+
+                    "station_device_id": "S113",
+
+                    "station_id": "S113"
+
+                },
+
+                "data_unit": "mm",
+
+                "data_type": "TB1 Rainfall 5 Minute Total F",
+
+                "location_label": "MARINE PARADE ROAD",
+
+                "long": 103.9104,
+
+                "lat": 1.30648
+
+            },
+
+            {
+
+                "info": {
+
+                    "rainfall": 0,
+
+                    "station_name": "Nanyang Avenue",
+
+                    "station_device_id": "S44",
+
+                    "station_id": "S44"
+
+                },
+
+                "data_unit": "mm",
+
+                "data_type": "TB1 Rainfall 5 Minute Total F",
+
+                "location_label": "NANYANG AVENUE",
+
+                "long": 103.68166,
+
+                "lat": 1.34583
+
+            },
+
+            {
+
+                "info": {
+
+                    "rainfall": 0,
+
+                    "station_name": "Nicoll Highway",
+
+                    "station_device_id": "S119",
+
+                    "station_id": "S119"
+
+                },
+
+                "data_unit": "mm",
+
+                "data_type": "TB1 Rainfall 5 Minute Total F",
+
+                "location_label": "NICOLL HIGHWAY",
+
+                "long": 103.8666,
+
+                "lat": 1.30105
+
+            },
+
+            {
+
+                "info": {
+
+                    "rainfall": 0,
+
+                    "station_name": "Old Choa Chu Kang Road",
+
+                    "station_device_id": "S121",
+
+                    "station_id": "S121"
+
+                },
+
+                "data_unit": "mm",
+
+                "data_type": "TB1 Rainfall 5 Minute Total F",
+
+                "location_label": "OLD CHOA CHU KANG ROAD",
+
+                "long": 103.72244,
+
+                "lat": 1.37288
+
+            },
+
+            {
+
+                "info": {
+
+                    "rainfall": 0,
+
+                    "station_name": "Old Toh Tuck Road",
+
+                    "station_device_id": "S35",
+
+                    "station_id": "S35"
+
+                },
+
+                "data_unit": "mm",
+
+                "data_type": "TB1 Rainfall 5 Minute Total F",
+
+                "location_label": "OLD TOH TUCK ROAD",
+
+                "long": 103.7556,
+
+                "lat": 1.3329
+
+            },
+
+            {
+
+                "info": {
+
+                    "rainfall": 0,
+
+                    "station_name": "Pasir Ris Drive 12",
+
+                    "station_device_id": "S29",
+
+                    "station_id": "S29"
+
+                },
+
+                "data_unit": "mm",
+
+                "data_type": "TB1 Rainfall 5 Minute Total F",
+
+                "location_label": "PASIR RIS DRIVE 12",
+
+                "long": 103.935,
+
+                "lat": 1.387
+
+            },
+
+            {
+
+                "info": {
+
+                    "rainfall": 0,
+
+                    "station_name": "Pasir Ris Street 51",
+
+                    "station_device_id": "S94",
+
+                    "station_id": "S94"
+
+                },
+
+                "data_unit": "mm",
+
+                "data_type": "TB1 Rainfall 5 Minute Total F",
+
+                "location_label": "PASIR RIS STREET 51",
+
+                "long": 103.9528,
+
+                "lat": 1.3662
+
+            },
+
+            {
+
+                "info": {
+
+                    "rainfall": 0,
+
+                    "station_name": "Poole Road",
+
+                    "station_device_id": "S78",
+
+                    "station_id": "S78"
+
+                },
+
+                "data_unit": "mm",
+
+                "data_type": "TB1 Rainfall 5 Minute Total F",
+
+                "location_label": "POOLE ROAD",
+
+                "long": 103.89067,
+
+                "lat": 1.30703
+
+            },
+
+            {
+
+                "info": {
+
+                    "rainfall": 0,
+
+                    "station_name": "Pulau Ubin",
+
+                    "station_device_id": "S106",
+
+                    "station_id": "S106"
+
+                },
+
+                "data_unit": "mm",
+
+                "data_type": "TB1 Rainfall 5 Minute Total F",
+
+                "location_label": "PULAU UBIN",
+
+                "long": 103.9673,
+
+                "lat": 1.4168
+
+            },
+
+            {
+
+                "info": {
+
+                    "rainfall": 0,
+
+                    "station_name": "Punggol Central",
+
+                    "station_device_id": "S81",
+
+                    "station_id": "S81"
+
+                },
+
+                "data_unit": "mm",
+
+                "data_type": "TB1 Rainfall 5 Minute Total F",
+
+                "location_label": "PUNGGOL CENTRAL",
+
+                "long": 103.9092,
+
+                "lat": 1.4029
+
+            },
+
+            {
+
+                "info": {
+
+                    "rainfall": 0,
+
+                    "station_name": "Scotts Road",
+
+                    "station_device_id": "S111",
+
+                    "station_id": "S111"
+
+                },
+
+                "data_unit": "mm",
+
+                "data_type": "TB1 Rainfall 5 Minute Total F",
+
+                "location_label": "SCOTTS ROAD",
+
+                "long": 103.8365,
+
+                "lat": 1.31055
+
+            },
+
+            {
+
+                "info": {
+
+                    "rainfall": 0,
+
+                    "station_name": "Seletar Aerospace View",
+
+                    "station_device_id": "S900",
+
+                    "station_id": "S900"
+
+                },
+
+                "data_unit": "mm",
+
+                "data_type": "TB1 Rainfall 5 Minute Total F",
+
+                "location_label": "SELETAR AEROSPACE VIEW",
+
+                "long": 103.86922,
+
+                "lat": 1.41284
+
+            },
+
+            {
+
+                "info": {
+
+                    "rainfall": 0,
+
+                    "station_name": "Sembawang Road",
+
+                    "station_device_id": "S122",
+
+                    "station_id": "S122"
+
+                },
+
+                "data_unit": "mm",
+
+                "data_type": "TB1 Rainfall 5 Minute Total F",
+
+                "location_label": "SEMBAWANG ROAD",
+
+                "long": 103.8249,
+
+                "lat": 1.41731
+
+            },
+
+            {
+
+                "info": {
+
+                    "rainfall": 0,
+
+                    "station_name": "Sentosa",
+
+                    "station_device_id": "S60",
+
+                    "station_id": "S60"
+
+                },
+
+                "data_unit": "mm",
+
+                "data_type": "TB1 Rainfall 5 Minute Total F",
+
+                "location_label": "SENTOSA",
+
+                "long": 103.8279,
+
+                "lat": 1.25
+
+            },
+
+            {
+
+                "info": {
+
+                    "rainfall": 0,
+
+                    "station_name": "Sime Road",
+
+                    "station_device_id": "S46",
+
+                    "station_id": "S46"
+
+                },
+
+                "data_unit": "mm",
+
+                "data_type": "TB1 Rainfall 5 Minute Total F",
+
+                "location_label": "SIME ROAD",
+
+                "long": 103.8106,
+
+                "lat": 1.3416
+
+            },
+
+            {
+
+                "info": {
+
+                    "rainfall": 0,
+
+                    "station_name": "Simei Avenue",
+
+                    "station_device_id": "S84",
+
+                    "station_id": "S84"
+
+                },
+
+                "data_unit": "mm",
+
+                "data_type": "TB1 Rainfall 5 Minute Total F",
+
+                "location_label": "SIMEI AVENUE",
+
+                "long": 103.9444,
+
+                "lat": 1.3437
+
+            },
+
+            {
+
+                "info": {
+
+                    "rainfall": 0,
+
+                    "station_name": "Somerset Road",
+
+                    "station_device_id": "S79",
+
+                    "station_id": "S79"
+
+                },
+
+                "data_unit": "mm",
+
+                "data_type": "TB1 Rainfall 5 Minute Total F",
+
+                "location_label": "SOMERSET ROAD",
+
+                "long": 103.8372,
+
+                "lat": 1.3004
+
+            },
+
+            {
+
+                "info": {
+
+                    "rainfall": 0,
+
+                    "station_name": "South Buona Vista Road",
+
+                    "station_device_id": "S92",
+
+                    "station_id": "S92"
+
+                },
+
+                "data_unit": "mm",
+
+                "data_type": "TB1 Rainfall 5 Minute Total F",
+
+                "location_label": "SOUTH BUONA VISTA ROAD",
+
+                "long": 103.7886,
+
+                "lat": 1.2841
+
+            },
+
+            {
+
+                "info": {
+
+                    "rainfall": 0,
+
+                    "station_name": "Toa Payoh North",
+
+                    "station_device_id": "S88",
+
+                    "station_id": "S88"
+
+                },
+
+                "data_unit": "mm",
+
+                "data_type": "TB1 Rainfall 5 Minute Total F",
+
+                "location_label": "TOA PAYOH NORTH",
+
+                "long": 103.8482,
+
+                "lat": 1.3427
+
+            },
+
+            {
+
+                "info": {
+
+                    "rainfall": 0,
+
+                    "station_name": "Towner Road",
+
+                    "station_device_id": "S123",
+
+                    "station_id": "S123"
+
+                },
+
+                "data_unit": "mm",
+
+                "data_type": "TB1 Rainfall 5 Minute Total F",
+
+                "location_label": "TOWNER ROAD",
+
+                "long": 103.8577,
+
+                "lat": 1.3214
+
+            },
+
+            {
+
+                "info": {
+
+                    "rainfall": 0,
+
+                    "station_name": "Tuas Road",
+
+                    "station_device_id": "S89",
+
+                    "station_id": "S89"
+
+                },
+
+                "data_unit": "mm",
+
+                "data_type": "TB1 Rainfall 5 Minute Total F",
+
+                "location_label": "TUAS ROAD",
+
+                "long": 103.66162,
+
+                "lat": 1.31985
+
+            },
+
+            {
+
+                "info": {
+
+                    "rainfall": 0,
+
+                    "station_name": "Tuas South Avenue 3",
+
+                    "station_device_id": "S115",
+
+                    "station_id": "S115"
+
+                },
+
+                "data_unit": "mm",
+
+                "data_type": "TB1 Rainfall 5 Minute Total F",
+
+                "location_label": "TUAS SOUTH AVENUE 3",
+
+                "long": 103.61843,
+
+                "lat": 1.29377
+
+            },
+
+            {
+
+                "info": {
+
+                    "rainfall": 0,
+
+                    "station_name": "Tuas West Road",
+
+                    "station_device_id": "S82",
+
+                    "station_id": "S82"
+
+                },
+
+                "data_unit": "mm",
+
+                "data_type": "TB1 Rainfall 5 Minute Total F",
+
+                "location_label": "TUAS WEST ROAD",
+
+                "long": 103.6351,
+
+                "lat": 1.3247
+
+            },
+
+            {
+
+                "info": {
+
+                    "rainfall": 0,
+
+                    "station_name": "Upper Changi Road North",
+
+                    "station_device_id": "S24",
+
+                    "station_id": "S24"
+
+                },
+
+                "data_unit": "mm",
+
+                "data_type": "TB1 Rainfall 5 Minute Total F",
+
+                "location_label": "UPPER CHANGI ROAD NORTH",
+
+                "long": 103.9826,
+
+                "lat": 1.3678
+
+            },
+
+            {
+
+                "info": {
+
+                    "rainfall": 0,
+
+                    "station_name": "Upper Thomson Road",
+
+                    "station_device_id": "S08",
+
+                    "station_id": "S08"
+
+                },
+
+                "data_unit": "mm",
+
+                "data_type": "TB1 Rainfall 5 Minute Total F",
+
+                "location_label": "UPPER THOMSON ROAD",
+
+                "long": 103.8271,
+
+                "lat": 1.3701
+
+            },
+
+            {
+
+                "info": {
+
+                    "rainfall": 0,
+
+                    "station_name": "West Coast Highway",
+
+                    "station_device_id": "S116",
+
+                    "station_id": "S116"
+
+                },
+
+                "data_unit": "mm",
+
+                "data_type": "TB1 Rainfall 5 Minute Total F",
+
+                "location_label": "WEST COAST HIGHWAY",
+
+                "long": 103.754,
+
+                "lat": 1.281
+
+            },
+
+            {
+
+                "info": {
+
+                    "rainfall": 0,
+
+                    "station_name": "Woodlands Avenue 9",
+
+                    "station_device_id": "S104",
+
+                    "station_id": "S104"
+
+                },
+
+                "data_unit": "mm",
+
+                "data_type": "TB1 Rainfall 5 Minute Total F",
+
+                "location_label": "WOODLANDS AVENUE 9",
+
+                "long": 103.78538,
+
+                "lat": 1.44387
+
+            }
+
+        ],
+
+        "_id": "5ce3ae3db16df30510c1dc7e",
+
+        "sorting_time": "2019-05-21T15:52:29.035Z",
+
+        "timestamp": "2019-05-21T07:40:00.000Z"
+
+    }
+
+}

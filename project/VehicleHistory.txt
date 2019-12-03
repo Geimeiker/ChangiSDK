@@ -1,0 +1,76 @@
+{
+ "message": "ok",
+ "result": [
+ {
+ "lastknownlocation": [
+ 103.9842,
+ 1.341772
+ ],
+ "_id": "5cedcd726740ab365239a5be",
+ "name": "RU 6857 G",
+ "positiontype": "GSM3G",
+ "speed": "0.05048697",
+ "heading": "325",
+ "roadname": "AIRPORT BOULEVARD",
+ "updated_at": "2019-05-29T00:06:23.000Z",
+ "__v": 0
+ },
+ {
+ "lastknownlocation": [
+ 103.9829,
+ 1.341708
+ ],
+ "_id": "5cedcfcb6740ab365239fe5b",
+ "name": "RU 6857 G",
+ "positiontype": "GSM3G",
+ "speed": "0.5654386",
+ "heading": "197",
+ "roadname": "AIRPORT BOULEVARD",
+ "updated_at": "2019-05-29T00:16:23.000Z",
+ "__v": 0
+ },
+ {
+ "lastknownlocation": [
+ 103.9821,
+ 1.339951
+ ],
+"_id": "5cedd2236740ab36523a56fe",
+ "name": "RU 6857 G",
+ "positiontype": "GSM3G",
+ "speed": "0.1030175",
+ "heading": "211",
+ "roadname": "AIRPORT BOULEVARD",
+ "updated_at": "2019-05-29T00:26:23.000Z",
+ "__v": 0
+ },
+ {
+ "lastknownlocation": [
+ 103.9831,
+ 1.344425
+ ],
+ "_id": "5cedd47b6740ab36523aad9f",
+ "name": "RU 6857 G",
+ "positiontype": "GSM3G",
+ "speed": "0.08406141",
+ "heading": "100",
+ "roadname": "AIRPORT BOULEVARD",
+ "updated_at": "2019-05-29T00:36:23.000Z",
+ "__v": 0
+ },
+ {
+ "lastknownlocation": [
+ 103.9824,
+ 1.3431
+ ],
+ "_id": "5cedd6d36740ab36523b063e",
+ "name": "RU 6857 G",
+ "positiontype": "GSM3G",
+ "speed": "0.07621336",
+ "heading": "157",
+ "roadname": "AIRPORT BOULEVARD",
+ "updated_at": "2019-05-29T00:46:23.000Z",
+ "__v": 0
+ }
+],
+ "count": 5
+}

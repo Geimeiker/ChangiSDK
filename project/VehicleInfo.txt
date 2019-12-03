@@ -1,0 +1,60 @@
+{
+ "message": "ok",
+ "result": [
+ {
+ "lastknownlocation": [
+ 103.982,
+ 1.336749
+ ],
+ "avatar_uri": "/static/img/mapbox-matsvehicle.png",
+ "_id": "5ca31670d3ff740ccc690299",
+ "name": "FBM 1714 A",
+ "description": "",
+ "updated_at": "2019-04-20T05:49:50.000Z",
+ "matsvehicle_monitor": [
+ {
+ "_id": "5cf9c5d0a334b11de89de0c1",
+ "name": "lat",
+ "value": "1.366749"
+ },
+ {
+ "_id": "5cf9c5d0a334b11de89de0c0",
+ "name": "long",
+ "value": "103.982"
+ },
+ {
+ "_id": "5cf9c5d0a334b11de89de0bf",
+ "name": "speed",
+"value": "0.04740239"
+ },
+ {
+ "_id": "5cf9c5d0a334b11de89de0be",
+ "name": "heading",
+ "value": "148"
+ },
+ {
+ "_id": "5cf9c5d0a334b11de89de0bd",
+ "name": "radius",
+ "value": "0.000899928"
+ },
+ {
+ "_id": "5cf9c5d0a334b11de89de0bc",
+ "name": "positiontype",
+ "value": "GSM3G"
+ },
+ {
+ "_id": "5cf9c5d0a334b11de89de0bb",
+ "name": "roadname",
+ "value": "TO EAST COAST PARK EPARK EPARK EPARK EPARK E"
+ },
+ {
+ "_id": "5cf9c5d0a334b11de89de0ba",
+ "name": "onlinestatus",
+ "value": "False"
+ }
+ ],
+ "__v": 0
+ }
+ ],
+ "count": 1
+}

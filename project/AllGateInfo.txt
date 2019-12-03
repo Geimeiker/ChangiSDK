@@ -1,0 +1,195 @@
+{
+ "message": "ok",
+ "result": [
+ {
+ "location": [
+ 103.79692111442728,
+ 1.3049789997540415
+ ],
+ "avatar_uri": "/static/img/mapbox-flight.png",
+ "_id": "5cb034c034f9d62fdca3125f",
+ "name": "B5",
+ "uniqueGateID": "B5",
+ "terminalID": "3",
+ "flight_monitor": [
+ {
+ "updated_at": "2019-04-12T06:48:32.702Z",
+ "_id": "5cb034c034f9d62fdca31267",
+ "name": "flightID",
+ "value": "SQ956"
+ },
+ {
+ "updated_at": "2019-04-12T06:48:32.702Z",
+ "_id": "5cb034c034f9d62fdca31266",
+ "name": "airline",
+ "value": "SINGAPORE AIRLINES"
+ },
+ {
+ "updated_at": "2019-04-12T06:48:32.702Z",
+ "_id": "5cb034c034f9d62fdca31265",
+ "name": "departureTime",
+ "value": ""
+ },
+ {
+ "updated_at": "2019-04-12T06:48:32.702Z",
+ "_id": "5cb034c034f9d62fdca31264",
+ "name": "arrivalTime",
+ "value": "18:20"
+ },
+ {
+"updated_at": "2019-04-12T06:48:32.701Z",
+ "_id": "5cb034c034f9d62fdca31263",
+ "name": "departureCity",
+ "value": "San Francisco, USA"
+ },
+ {
+ "updated_at": "2019-04-12T06:48:32.701Z",
+ "_id": "5cb034c034f9d62fdca31262",
+ "name": "arrivalCity",
+ "value": "Singapore (Changi)"
+ },
+ {
+ "updated_at": "2019-04-12T06:48:32.701Z",
+ "_id": "5cb034c034f9d62fdca31261",
+ "name": "status",
+ "value": "On-Time"
+ },
+ {
+ "updated_at": "2019-04-12T06:48:32.701Z",
+ "_id": "5cb034c034f9d62fdca31260",
+ "name": "remarks",
+ "value": ""
+ }
+ ],
+ "updated_at": "2019-04-12T06:48:32.702Z",
+ "__v": 0
+ },
+ {
+ "location": [
+ 103.79692111442728,
+ 1.3049789997540415
+ ],
+ "avatar_uri": "/static/img/mapbox-flight.png",
+ "_id": "5cb0378334f9d62fdca31268",
+ "name": "A1",
+ "uniqueGateID": "A1",
+ "terminalID": "T3",
+ "flight_monitor": [
+ {
+ "updated_at": "2019-04-12T07:00:19.886Z",
+ "_id": "5cb0378334f9d62fdca31270",
+ "name": "flightID",
+ "value": "SQ225"
+ },
+ {
+ "updated_at": "2019-04-12T07:00:19.886Z",
+ "_id": "5cb0378334f9d62fdca3126f",
+ "name": "airline",
+"value": "SINGAPORE AIRLINES"
+ },
+ {
+ "updated_at": "2019-04-12T07:00:19.886Z",
+ "_id": "5cb0378334f9d62fdca3126e",
+ "name": "departureTime",
+ "value": "00:05"
+ },
+ {
+ "updated_at": "2019-04-12T07:00:19.886Z",
+ "_id": "5cb0378334f9d62fdca3126d",
+ "name": "arrivalTime",
+ "value": ""
+ },
+ {
+ "updated_at": "2019-04-12T07:00:19.886Z",
+ "_id": "5cb0378334f9d62fdca3126c",
+ "name": "departureCity",
+ "value": "Singapore (Changi)"
+ },
+ {
+ "updated_at": "2019-04-12T07:00:19.886Z",
+ "_id": "5cb0378334f9d62fdca3126b",
+ "name": "arrivalCity",
+ "value": "Perth, Australia"
+ },
+ {
+ "updated_at": "2019-04-12T07:00:19.886Z",
+ "_id": "5cb0378334f9d62fdca3126a",
+ "name": "status",
+ "value": "On-Time"
+ },
+ {
+ "updated_at": "2019-04-12T07:00:19.886Z",
+ "_id": "5cb0378334f9d62fdca31269",
+ "name": "remarks",
+ "value": ""
+ }
+ ],
+ "updated_at": "2019-04-12T07:00:19.886Z",
+ "__v": 0
+ },
+ {
+ "location": [
+ 103.79692111442728,
+ 1.3049789997540415
+ ],
+ "avatar_uri": "/static/img/mapbox-flight.png",
+"_id": "5cb037f034f9d62fdca31271",
+ "name": "A2",
+ "uniqueGateID": "A2",
+ "terminalID": "T3",
+ "flight_monitor": [
+ {
+ "updated_at": "2019-04-12T07:02:08.710Z",
+ "_id": "5cb037f034f9d62fdca31279",
+ "name": "flightID",
+ "value": "LO68"
+ },
+ {
+ "updated_at": "2019-04-12T07:02:08.710Z",
+ "_id": "5cb037f034f9d62fdca31278",
+ "name": "airline",
+ "value": "LOT POLISH AIRLINES"
+ },
+ {
+ "updated_at": "2019-04-12T07:02:08.710Z",
+ "_id": "5cb037f034f9d62fdca31277",
+ "name": "departureTime",
+ "value": "00:05"
+ },
+ {
+ "updated_at": "2019-04-12T07:02:08.710Z",
+ "_id": "5cb037f034f9d62fdca31276",
+ "name": "arrivalTime",
+ "value": ""
+ },
+ {
+ "updated_at": "2019-04-12T07:02:08.710Z",
+ "_id": "5cb037f034f9d62fdca31275",
+ "name": "departureCity",
+ "value": "Singapore (Changi)"
+ },
+ {
+ "updated_at": "2019-04-12T07:02:08.710Z",
+ "_id": "5cb037f034f9d62fdca31274",
+ "name": "arrivalCity",
+ "value": "Warsaw, Poland"
+ },
+ {
+ "updated_at": "2019-04-12T07:02:08.710Z",
+ "_id": "5cb037f034f9d62fdca31273",
+ "name": "status",
+ "value": "On-Time"
+ },
+ {
+"updated_at": "2019-04-12T07:02:08.710Z",
+ "_id": "5cb037f034f9d62fdca31272",
+ "name": "remarks",
+ "value": ""
+ }
+ ],
+ "updated_at": "2019-04-12T07:02:08.710Z",
+ "__v": 0
+ }
+ ],
+ "count": 3
+}

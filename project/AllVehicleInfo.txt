@@ -1,0 +1,168 @@
+{
+ "message": "ok",
+ "result": [
+ {
+ "lastknownlocation": [
+ 103.9919,
+ 1.361256
+ ],
+ "avatar_uri": "/static/img/mapbox-matsvehicle.png",
+ "_id": "5ca3164ed3ff740ccc690295",
+ "name": "FBM 1714 A",
+ "description": "",
+ "updated_at": "2019-06-07T02:27:33.000Z",
+ "matsvehicle_monitor": [
+ {
+ "_id": "5cf9cbf9a334b11de89ec875",
+ "name": "lat",
+ "value": "1.361256"
+ },
+ {
+ "_id": "5cf9cbf9a334b11de89ec874",
+ "name": "long",
+ "value": "104.000"
+ },
+ {
+ "_id": "5cf9cbf9a334b11de89ec873",
+ "name": "speed",
+ "value": "0.185"
+ },
+ {
+ "_id": "5cf9cbf9a334b11de89ec872",
+ "name": "heading",
+ "value": "223"
+ },
+ {
+ "_id": "5cf9cbf9a334b11de89ec871",
+ "name": "radius",
+ "value": "0.000449964"
+ },
+ {
+ "_id": "5cf9cbf9a334b11de89ec870",
+ "name": "positiontype",
+ "value": "FRZ"
+},
+ {
+ "_id": "5cf9cbf9a334b11de89ec86f",
+ "name": "roadname",
+ "value": "T1 DEPARTURE CRESCENT"
+ },
+ {
+ "_id": "5cf9cbf9a334b11de89ec86e",
+ "name": "onlinestatus",
+ "value": "True"
+ }
+ ],
+ "__v": 0
+ },
+ {
+ "lastknownlocation": [
+ 103.988,
+ 1.36059
+ ],
+ "avatar_uri": "/static/img/mapbox-matsvehicle.png",
+ "_id": "5ca3165bd3ff740ccc690296",
+ "name": "FBM 1723 Z",
+ "description": "",
+ "updated_at": "2019-05-05T03:49:05.000Z",
+ "matsvehicle_monitor": [
+ {
+ "_id": "5cf9cbf9a334b11de89ec885",
+ "name": "lat",
+ "value": "1.36059"
+ },
+ {
+ "_id": "5cf9cbf9a334b11de89ec884",
+ "name": "long",
+ "value": "103.988"
+ },
+ {
+ "_id": "5cf9cbf9a334b11de89ec883",
+ "name": "speed",
+ "value": "0"
+ },
+ {
+ "_id": "5cf9cbf9a334b11de89ec882",
+ "name": "heading",
+ "value": "0"
+ },
+ {
+ "_id": "5cf9cbf9a334b11de89ec881",
+ "name": "radius",
+"value": "0"
+ },
+ {
+ "_id": "5cf9cbf9a334b11de89ec880",
+ "name": "positiontype",
+ "value": "GPS"
+ },
+ {
+ "_id": "5cf9cbf9a334b11de89ec87f",
+ "name": "roadname",
+ "value": "AIRPORT BOULEVARD"
+ },
+ {
+ "_id": "5cf9cbf9a334b11de89ec87e",
+ "name": "onlinestatus",
+ "value": "False"
+ }
+ ],
+ "__v": 0
+ },
+ {
+ "lastknownlocation": [
+ 103.9915,
+ 1.361203
+ ],
+ "avatar_uri": "/static/img/mapbox-matsvehicle.png",
+ "_id": "5ca31664d3ff740ccc690297",
+ "name": "FBM 1725 T",
+ "description": "",
+ "updated_at": "2019-06-07T01:46:54.000Z",
+ "matsvehicle_monitor": [
+ {
+ "_id": "5cf9cbefa334b11de89ec715",
+ "name": "lat",
+ "value": "1.361203"
+ },
+ {
+ "_id": "5cf9cbefa334b11de89ec714",
+ "name": "long",
+ "value": "103.9915"
+ },
+ {
+ "_id": "5cf9cbefa334b11de89ec713",
+ "name": "speed",
+ "value": "0.185"
+ },
+ {
+ "_id": "5cf9cbefa334b11de89ec712",
+"name": "heading",
+ "value": "297"
+ },
+ {
+ "_id": "5cf9cbefa334b11de89ec711",
+ "name": "radius",
+ "value": "0.000449964"
+ },
+ {
+ "_id": "5cf9cbefa334b11de89ec710",
+ "name": "positiontype",
+ "value": "FRZ"
+ },
+ {
+ "_id": "5cf9cbefa334b11de89ec70f",
+ "name": "roadname",
+ "value": "T1 DEPARTURE CRESCENT"
+ },
+ {
+ "_id": "5cf9cbefa334b11de89ec70e",
+ "name": "onlinestatus",
+ "value": "False"
+ }
+ ],
+ "__v": 0
+ }
+ ],
+ "count": 3
+}

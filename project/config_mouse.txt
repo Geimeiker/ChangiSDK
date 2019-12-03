@@ -1,0 +1,2 @@
+﻿mouse_1=HIT RATE,Pass week:21,Past 24hrs:5
+mouse_2=HIT RATE,Pass week:13,Past 24hrs:3

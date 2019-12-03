@@ -1,0 +1,69 @@
+{
+    "message": "ok",
+    "result": [
+        {
+            "location": [
+                103.79692111442728,
+                1.3049789997540415
+            ],
+            "avatar_uri": "/static/img/mapbox-flight.png",
+            "_id": "5cb05a6834f9d62fdca3163d",
+            "name": "F36",
+            "uniqueGateID": "F36",
+            "terminalID": "T2",
+            "flight_monitor": [
+                {
+                    "updated_at": "2019-04-12T09:29:12.224Z",
+                    "_id": "5cb05a6834f9d62fdca31645",
+                    "name": "flightID",
+                    "value": "MI772"
+                },
+                {
+                    "updated_at": "2019-04-12T09:29:12.224Z",
+                    "_id": "5cb05a6834f9d62fdca31644",
+                    "name": "airline",
+                    "value": "SILKAIR"
+                },
+                {
+                    "updated_at": "2019-04-12T09:29:12.224Z",
+                    "_id": "5cb05a6834f9d62fdca31643",
+                    "name": "departureTime",
+                    "value": "03:50"
+                },
+                {
+                    "updated_at": "2019-04-12T09:29:12.224Z",
+                    "_id": "5cb05a6834f9d62fdca31642",
+                    "name": "arrivalTime",
+                    "value": ""
+                },
+                {
+                    "updated_at": "2019-04-12T09:29:12.224Z",
+                    "_id": "5cb05a6834f9d62fdca31641",
+                    "name": "departureCity",
+                    "value": "Singapore (Changi)"
+                },
+                {
+                    "updated_at": "2019-04-12T09:29:12.224Z",
+                    "_id": "5cb05a6834f9d62fdca31640",
+                    "name": "arrivalCity",
+                    "value": "Koh Samui, Thailand"
+                },
+                {
+                    "updated_at": "2019-04-12T09:29:12.224Z",
+                    "_id": "5cb05a6834f9d62fdca3163f",
+                    "name": "status",
+                    "value": "On-Time"
+                },
+                {
+                    "updated_at": "2019-04-12T09:29:12.224Z",
+                    "_id": "5cb05a6834f9d62fdca3163e",
+                    "name": "remarks",
+                    "value": ""
+                }
+            ],
+            "updated_at": "2019-04-12T09:29:12.224Z",
+            "__v": 0
+        }
+    ],
+    "count": 1
+}

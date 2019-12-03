@@ -1,0 +1,320 @@
+﻿<!doctype html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | DCIM_PROJ</title>
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <link rel="stylesheet" href="TemplateData/customStyle.css">
+    <script src="TemplateData/UnityProgress.js"></script>
+	<script src="api/ChanggiSDK.js"></script>
+    <script src="Release/UnityLoader.js"></script>
+    <script type="text/javascript" src="TemplateData/tweenjs-0.6.2.min.js"></script>
+    <script type="text/javascript" src="TemplateData/CSSPlugin.js"></script>
+</head>
+
+<body class="template">
+    <div class="fullWidth">
+        <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" height="700px" width="960px" tabindex="1"></canvas>
+
+        <div id="loadingBox">
+            <img id="logo" src="TemplateData/logo.png" />
+
+            <div id="bgBar"></div>
+            <div id="progressBar"></div>
+            <p id="loadingInfo"></p>
+        </div>
+
+    </div>
+    <script type='text/javascript'>
+
+        var Module = {
+            TOTAL_MEMORY: 1836870912,
+            errorhandler: null,			// arguments: err, url, line. This function must return 'true' if the error is handled, otherwise 'false'
+            compatibilitycheck: null,
+            backgroundColor: "#222C36",
+            splashStyle: "Light",
+            dataUrl: "Release/webgl.data",
+            codeUrl: "Release/webgl.js",
+            asmUrl: "Release/webgl.asm.js",
+            memUrl: "Release/webgl.mem",
+        };
+		
+		function KeyDown()
+		{ 
+		    if(typeof (window.event) != 'undefined' && window.event.button == 1)
+		    {
+			  event.returnValue = false; 
+		    }
+	    }
+		
+		function AddEvent()
+		{
+			document.onmousedown = KeyDown;
+		}
+
+		//webgl主动调用。(可内部增加操作接口)。
+		//## 0.webgl程序启动后会调用html页面的InitData方法，在此之后，webgl才能响应SendUnityMessage方法。
+		//可在此函数体内，告诉webgl一些基本配置信息。###
+        function InitData() {
+			console.log("InitData" + "在此可以把配置文件路径发送给webgl");
+			
+			//1.如果程序配置文件位置不正确报错，则在这个地方，告诉webgl程序正确的配置文件路径(config.txt所在文件夹的绝对路径以"/"结束)。
+			//SendUnityMessage("SetConfigPath", configPath);
+			//参数：SetConfigPath为webgl程序接收的函数名，参数：configPath为cconfig.txt所在文件夹的绝对路径以"/"结束。
+			//例：SendUnityMessage("SetConfigPath", "http://192.168.0.1.1:8086/xx/xxxx/webgl/project/");
+			
+			//SendUnityMessage("SetConfigPath", "http://localhost:5614/Scripts/webgl/project/");
+			
+			
+			//2.设置默认打开的楼层("大楼索引,楼层索引")
+			SendUnityMessage("SetDefaultLayer", "0,0");
+        }
+		
+		//webgl主动调用。(可内部增加操作接口)。
+		//webgl程序加载完成模型后会调用此方法。
+        function OnLoadAllModelEnd() {
+			console.log("OnLoadAllModelEndOnLoadAllModelEndOnLoadAllModelEnd");
+        }
+		
+		//webgl主动调用。
+		//2.0 webgl传递监控配置树给web，web把设备模型对应的id绑定到监控设备去。
+		function SetMonitorConfigTree(data) {
+			console.log("SetMonitorConfigTree" + data);
+        }
+
+        //webgl主动调用
+        //webgl传递菜单类型数据树给web
+        function webgl_transmit_get_web_menutype_tree(data) {
+            console.log("webgl_transmit_get_web_menutype_tree" + data);
+        }
+
+		//webgl主动调用。
+		//##5.webgl当点击场景中图标或者设备模型时，传递设备信息给web。 ###
+		function DeviceOnSelect(data) {
+		    console.log("DeviceOnSelect" + data);
+		    parent.deviceCallback(null);
+        }
+		
+		//webgl主动调用。
+		//##7.1 在点击创建分组的确定时，同时webgl传递选中的所有设备信息给web。###
+		function DeviceGroupOnSelect(data) {
+			console.log("DeviceGroupOnSelect" + data);
+        }
+		
+		//webgl主动调用。
+		//## 当鼠标放到图标上时，传递对应设备ID给web。###
+		function LoadDeviceMonitorData(ID) 
+		{
+			console.log("LoadDeviceMonitorData ID" + ID);
+			
+			//调用HoverDianWei(ID)得到jsonData;
+			
+			//完成后得到jsonData调用SendUnityMessage方法。
+			//SetDeviceMonitorData为webgl的里面接收数据的方法名;jsonData为获得的点位监控数据的json。
+			//SendUnityMessage("SetDeviceMonitorData", JSON.stringify(jsonData));
+			
+			var jsonData = {"name":"设备名2342323","data":[{"key":"模式","value":"关机"},{"key":"模式2","value":"关机"}]};
+			SendUnityMessage("SetDeviceMonitorData", JSON.stringify(jsonData));
+        }
+				
+		//webgl主动调用。
+		//##4.4 当4.1接口调用时，调用此函数告诉web调用的结果###
+		function SetNodeStatueCallBack(bSuccess) 
+		{
+			console.log("SetNodeStatueCallBack bSuccess" + bSuccess);
+        }	
+		
+		///////////////////////////////////////////////////////////////////
+		///////////////////////////////////////////////////////////////////
+		//webgl主动调用，被动调用分界。
+		///////////////////////////////////////////////////////////////////
+		///////////////////////////////////////////////////////////////////
+		
+		//webgl被调用。
+		//直接发送消息给unity(可调用接口)。
+		//参数：funcname为webgl接收的函数名;参数：data为对应数据。
+        function SendUnityMessage(funcName, data) {
+            console.log(funcName + data);
+            SendMessage("jsobject", funcName, data);
+            window.focus();
+        }
+		
+		//webgl被调用。
+		//##4.1 点击左侧菜单时发送点击消息给webgl模块，webgl模块显示对应的设备图标 ###
+		//array格式为[{id,status},{id,status},……]， 数组
+		//noShowIds，该建筑楼层下需要隐藏的没有权限的点位，数组
+		//fenZuDeviceIds 该分组下的所有设备id的集合，数组
+		//justOneDeviceId 只是分组下一个设备id而已，字符串
+        function SetNodeStatue(array, noShowIds, fenZuDeviceIds, justOneDeviceId)
+		{
+			SendUnityMessage("SetNodeStatue", JSON.stringify(array) + "|-|" + noShowIds+ "|-|"  + fenZuDeviceIds + "|-|" + justOneDeviceId);
+		}
+				
+		//webgl被调用。
+		//##4.3 设置点解除加载状态 ###
+		//array格式为id0-id1-id2 字符串
+		function SetNodeLoading(array) 
+		{
+			SendUnityMessage("SetNodeLoading", array);
+		}
+				
+		//webgl被调用。
+		//##4.2 设置点进入加载状态 ###
+		//array格式为id0-id1-id2 字符串
+		function ResetNodeNotLoading(array) 
+		{
+			SendUnityMessage("ResetNodeNotLoading", array);
+		}
+		
+		//webgl被调用。
+		//##14.webgl提供跳转到对应楼层接口###
+		//跳转到对应场景。(可调用接口)。
+        function JumpLayer(sceneIndex, floorIndex) {
+            SendUnityMessage("JumpLayer", sceneIndex + "," + floorIndex);
+			
+			//要跳转到对应楼层。
+			//参数：sceneIndex为要跳转的场景索引，参数：floorIndex为跳转的楼层索引。
+			//调用方式：JumpLayer(sceneIndex, floorIndex);
+			//例：JumpLayer(0, 1);
+			//注意：当前场景sceneIndex只支持0，floorIndex支持0~10。
+        }
+
+    	//webgl被调用。
+		//##14.1webgl提供跳转到对应楼层接口###
+		//跳转到对应场景。(可调用接口)。
+        function JumpLayerByName(sceneName, floorName) {
+            SendUnityMessage("JumpLayerByName", sceneName + "," + floorName);
+        }
+
+    	//webgl被调用。
+		//##14.2webgl提供跳转到对应楼层接口###
+		//跳转到对应场景。(可调用接口)。
+        function JumpLayerByHYID(sceneHYID, floorHYID) {
+            SendUnityMessage("JumpLayerByHYID", sceneHYID + "," + floorHYID);
+        }
+		
+		//webgl被调用。
+		//##15 webgl提供摄像机缩放###
+        function CameraScroll(nScroll) {
+            SendUnityMessage("CameraScroll", nScroll);
+			
+			//参数：nScroll为缩放大小。
+			//调用方式：CameraScroll(nScroll);
+			//例：CameraScroll(10);
+        }
+		
+		//webgl被调用。
+		//##16 webgl提供摄像机移动###
+        function CameraMove(moveX, moveY) {
+            SendUnityMessage("CameraMove", moveX + "," + moveY);
+			
+			//参数：moveX为横向移动大小，参数：moveY纵向移动大小。
+			//调用方式：CameraMove(moveX, moveY);
+			//例：CameraMove(10, 10);
+        }
+		
+		//webgl被调用。
+		//##17.webgl提供摄像机视图状态###
+        function SetViewState(cameraState) {
+            SendUnityMessage("SetViewState", cameraState);
+			
+			//参数：cameraState为摄像机状态，0为2D，1为3D。
+			//调用方式：SetViewState(0);
+        }		
+		
+		//webgl被调用。
+		//##18.webgl提供摄像机视图状态###
+        function LogCameraConfig() {
+            SendUnityMessage("LogCameraConfig", "");
+			
+			//参数：cameraState为摄像机状态，0为2D，1为3D。
+			//调用方式：SetViewState(0);
+        }
+		
+		//webgl被调用。
+		//##19.webgl提供打印摄像机位置信息###
+        function SetCamera3DConfig(pConfig) {
+            SendUnityMessage("SetCamera3DConfig", pConfig);
+			
+			//参数：cameraState为摄像机状态，0为2D，1为3D。
+			//调用方式：SetViewState(0);
+        }
+
+        //webgl被调用
+        //模型过滤      
+        function RefMenuTypeChange(id, checked) {
+            SendUnityMessage("RefMenuTypeChange", id + "," + checked);
+             //参数：id就是分类ID；checked值是"true"或"false"，控制显示隐藏
+        }
+
+        function SendMakerMessge(data) {
+                      
+        }
+
+        var pMarker;
+
+		///测试代码：
+		document.onkeydown = function(event){
+		console.log('你按下了' + String.fromCharCode(event.keyCode)); 11
+		switch(String.fromCharCode(event.keyCode))
+		{
+			case 'a':
+			//按下小数字键盘1
+                //CameraScroll('10');
+                pMarker = createMarker(1.361256, 104.000);
+			break;
+			case 'b':
+                //按下小数字键盘2
+                pMarker.setPosition(1.36059, 103.988);
+			break;
+
+			case 'c':
+                //按下小数字键盘3
+                pMarker.setDisplay('SDS12ada', '18', '#ff0000', 'Bottom');
+			break;
+
+			case 'd':
+			//按下小数字键盘4
+			//SetViewState('1');
+			break;
+
+			case 'e':
+			//按下小数字键盘5
+                //JumpLayerByHYID('00010002,000100020001');
+				pMarker.setIcon('http://pic.90sjimg.com/design/01/54/03/90/5930149711114.png');
+			break;
+
+			case 'f':
+			//按下小数字键盘6
+			//JumpLayer(1,0);
+                //JumpLayerByHYID('00010003,000100030001');
+				pMarker.remove();
+			break;
+
+			case 'g':
+			//按下小数字键盘7
+                //var tempJson = JSON.parse('[{"id":"5_1_44574","src":"http://localhost/dcimsdkst/project/icon_data/icon/heating.png"},{"id":"5_1_45086","src":"http://localhost/dcimsdkst/project/icon_data/icon/heating.png"}]');
+                //SetNodeStatue(tempJson, 'null', '', '');
+                Map.init(10, 1.36059, 103.988);
+			break;
+			case 'h':
+			//按下小数字键盘8
+                //LogCameraConfig();
+				Map.home();
+			break;
+			case 'i':
+			//按下小数字键盘9
+                //LoadExcel('project/3DSimulatorTask_Data/3DSimulatorTask.xlsx');
+                Map.go
+			break;
+		}
+		};
+		
+        AddEvent();
+		
+    </script>
+    <script src="Release/UnityLoader.js"></script>
+</body>
+
+</html>
