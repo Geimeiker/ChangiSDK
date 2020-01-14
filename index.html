@@ -262,7 +262,7 @@
 			case 'a':
 			//按下小数字键盘1
                 //CameraScroll('10');
-                pMarker = createMarker(1.361256, 104.000);
+                pMarker = createMarker(1.361256, 104.000, MarkerType.Traffic);
 			break;
 			case 'b':
                 //按下小数字键盘2
@@ -275,21 +275,21 @@
 			break;
 
 			case 'd':
-			//按下小数字键盘4
-			//SetViewState('1');
+                pMarker.setEnable(false);
 			break;
 
 			case 'e':
 			//按下小数字键盘5
-                //JumpLayerByHYID('00010002,000100020001');
-				pMarker.setIcon('http://pic.90sjimg.com/design/01/54/03/90/5930149711114.png');
+                pMarker.highlight(true);
+				pMarker.setMarkerIcon('https://dss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2453488943,2804257221&fm=26&gp=0.jpg');
 			break;
 
 			case 'f':
 			//按下小数字键盘6
 			//JumpLayer(1,0);
                 //JumpLayerByHYID('00010003,000100030001');
-				pMarker.remove();
+                pMarker.highlight(false);
+                pMarker.blink(false);
 			break;
 
 			case 'g':

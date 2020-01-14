@@ -44,14 +44,39 @@ function createMap() {
 
 
 
+//marker类型（枚举）
+var MarkerType = {
 
+    FieldOfficer: 1,
+
+    Robot: 2,
+
+    Drone: 3,
+
+    CCTV: 4,
+
+    GTPoints: 5,
+
+    Incidents: 6,
+
+    Events: 7,
+
+    Kiosk: 8,
+
+    Traffic: 9,
+
+    Weather: 10,
+
+    Duress: 11,
+
+};
 //提示列表。
 var aMarkerArray = new Array();
 //删除后，缓存的ID列表。
 var aIDArray = new Array();
 
-//添加一个标记点
-function createMarker(nLat, nLng) {
+//创建一个标记点
+function createMarker(nLat, nLng, eMarkerType) {
     var o = new Object();
 	
 	if(aIDArray.length > 0)
@@ -64,7 +89,7 @@ function createMarker(nLat, nLng) {
 	}
     
     //添加点。
-    SendUnityMessage("MarkerAdd", o.nID + "#" + nLat + "," + nLng);
+    SendUnityMessage("MarkerAdd", o.nID + "#" + nLat + "," + nLng + "#" + eMarkerType);
 
     /// <summary>
     /// 设置文字显示(参数为"SDS12345,SMALL,#ff0000,Bottom|Middle|Top")
@@ -79,10 +104,18 @@ function createMarker(nLat, nLng) {
     /// <summary>
     /// 设置图标图片（参数为全路径"http://xxx.jpg"）。
     /// </summary>
-    o.setIcon = function (pIconURL) {
+    o.setMarkerIcon = function (pIconURL) {
 
         console.log("MarkerMessage", o.nID + "~!~setIcon@#@" + pIconURL);
         SendUnityMessage("MarkerMessage", o.nID + "~!~setIcon@#@" + pIconURL);
+    }
+
+    /// <summary>
+    /// 设置图标上的车辆图片（参数为全路径"http://xxx.jpg"）。
+    /// </summary>
+    o.setVehicleIcon = function (pIconURL, nWidth, nHeight) {
+        console.log("MarkerMessage", o.nID + "~!~setVehicleIcon@#@" + pIconURL + "," + nWidth + "," + nHeight);
+        SendUnityMessage("MarkerMessage", o.nID + "~!~setVehicleIcon@#@" + pIconURL + "," + nWidth + "," + nHeight);
     }
 
     /// <summary>
@@ -96,12 +129,30 @@ function createMarker(nLat, nLng) {
     }
 
     /// <summary>
+    /// 设置启用(参数为"true|false")。
+    /// </summary>
+    o.setEnable = function (bActive) {
+
+        console.log("MarkerMessage", o.nID + "~!~setEnable@#@" + bActive);
+        SendUnityMessage("MarkerMessage", o.nID + "~!~setEnable@#@" + bActive);
+    }
+
+    /// <summary>
     /// 设置高光(参数为"true|false")。
     /// </summary>
     o.highlight = function (bActive) {
 
         console.log("MarkerMessage", o.nID + "~!~highlight@#@" + bActive);
         SendUnityMessage("MarkerMessage", o.nID + "~!~highlight@#@" + bActive);
+    }
+
+    /// <summary>
+    /// 设置闪烁(参数为"true|false")。
+    /// </summary>
+    o.blink = function (bActive) {
+
+        console.log("MarkerMessage", o.nID + "~!~blink@#@" + bActive);
+        SendUnityMessage("MarkerMessage", o.nID + "~!~blink@#@" + bActive);
     }
 
     /// <summary>
@@ -195,6 +246,21 @@ function createMarker(nLat, nLng) {
     aMarkerArray.push(o);
     return o;
 }
+
+
+
+//创建一个层
+function createLayer(layerName) {
+    var o = new Object();
+
+    SendUnityMessage("LayerAdd", layerName);
+
+    o.addMarker = function (marker) {
+
+    }
+}
+
+
 
 function OnGetMessage(dataMessge)
 {
