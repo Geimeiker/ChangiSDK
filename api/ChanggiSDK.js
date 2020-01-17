@@ -44,6 +44,40 @@ function createMap() {
 
 
 
+
+
+//自定义事件
+function EventCenter() {
+    this.handlers = {}
+}
+EventCenter.prototype = {
+    constructor: EventCenter,
+    addListener: function (type, handler) {
+        if (this.handlers[type] === undefined) {
+            this.handlers[type] = []
+        }
+        this.handlers[type].push(handler)
+    },
+    invoke: function (type, ...args) {
+        const typeHandlers = this.handlers[type]
+
+        if (typeHandlers === undefined || typeHandlers.length === 0) {
+            return
+        }
+
+        for (let i = 0; i < typeHandlers.length; i++) {
+            typeHandlers[i].apply(this, args)
+        }
+    },
+    removeListener: function (type, handler) {
+        if (this.handlers[type] === undefined) {
+            return
+        }
+
+        this.handlers[type] = this.handlers[type].filter((item) => item !== handler)
+    }
+}
+
 //marker类型（枚举）
 var MarkerType = {
 
@@ -70,15 +104,51 @@ var MarkerType = {
     Duress: 11,
 
 };
+
 //提示列表。
-var aMarkerArray = new Array();
+var aTrafficMarkerArray = new Array();
+var aCCTVMarkerArray = new Array();
 //删除后，缓存的ID列表。
-var aIDArray = new Array();
+var aTrafficIDArray = new Array();
+var aCCTVIDArray = new Array();
 
 //创建一个标记点
 function createMarker(nLat, nLng, eMarkerType) {
     var o = new Object();
-	
+
+    o.markerType = eMarkerType;
+
+    var aMarkerArray;
+    var aIDArray;
+    switch (eMarkerType) {
+        case MarkerType.FieldOfficer:
+            break;
+        case MarkerType.Robot:
+            break;
+        case MarkerType.Drone:
+            break;
+        case MarkerType.CCTV:
+            aMarkerArray = aCCTVMarkerArray;
+            aIDArray = aCCTVIDArray;
+            break;
+        case MarkerType.GTPoints:
+            break;
+        case MarkerType.Incidents:
+            break;
+        case MarkerType.Events:
+            break;
+        case MarkerType.Kiosk:
+            break;
+        case MarkerType.Traffic:
+            aMarkerArray = aTrafficMarkerArray;
+            aIDArray = aTrafficIDArray;
+            break;
+        case MarkerType.Weather:
+            break;
+        case MarkerType.Duress:
+            break;
+    }
+
 	if(aIDArray.length > 0)
 	{
 		o.nID = aIDArray.pop();
@@ -86,10 +156,10 @@ function createMarker(nLat, nLng, eMarkerType) {
 	else
 	{
 		o.nID = aMarkerArray.length + "";
-	}
-    
+    }
+
     //添加点。
-    SendUnityMessage("MarkerAdd", o.nID + "#" + nLat + "," + nLng + "#" + eMarkerType);
+    SendUnityMessage("MarkerAdd", o.nID + "#" + nLat + "," + nLng + "#" + o.markerType);
 
     /// <summary>
     /// 设置文字显示(参数为"SDS12345,SMALL,#ff0000,Bottom|Middle|Top")
@@ -97,25 +167,17 @@ function createMarker(nLat, nLng, eMarkerType) {
     /// </summary>
     o.setDisplay = function (pName, pStyle, pColor, pPosition) {
 
-        console.log("MarkerMessage", o.nID + "~!~setDisplay@#@" + pName + "," + pStyle + "," + pColor + "," + pPosition);
-        SendUnityMessage("MarkerMessage", o.nID + "~!~setDisplay@#@" + pName + "," + pStyle + "," + pColor + "," + pPosition);
+        console.log("MarkerMessage", o.markerType + "~!~" + o.nID + "~!~setDisplay@#@" + pName + "," + pStyle + "," + pColor + "," + pPosition);
+        SendUnityMessage("MarkerMessage", o.markerType + "~!~" + o.nID + "~!~setDisplay@#@" + pName + "," + pStyle + "," + pColor + "," + pPosition);
     }
 
     /// <summary>
     /// 设置图标图片（参数为全路径"http://xxx.jpg"）。
     /// </summary>
-    o.setMarkerIcon = function (pIconURL) {
+    o.setMarkerIcon = function (pIconURL, nWidth, nHeight) {
 
-        console.log("MarkerMessage", o.nID + "~!~setIcon@#@" + pIconURL);
-        SendUnityMessage("MarkerMessage", o.nID + "~!~setIcon@#@" + pIconURL);
-    }
-
-    /// <summary>
-    /// 设置图标上的车辆图片（参数为全路径"http://xxx.jpg"）。
-    /// </summary>
-    o.setVehicleIcon = function (pIconURL, nWidth, nHeight) {
-        console.log("MarkerMessage", o.nID + "~!~setVehicleIcon@#@" + pIconURL + "," + nWidth + "," + nHeight);
-        SendUnityMessage("MarkerMessage", o.nID + "~!~setVehicleIcon@#@" + pIconURL + "," + nWidth + "," + nHeight);
+        console.log("MarkerMessage", o.markerType + "~!~" + o.nID + "~!~setMarkerIcon@#@" + pIconURL + "~&~" + nWidth + "~&~" + nHeight);
+        SendUnityMessage("MarkerMessage", o.markerType + "~!~" + o.nID + "~!~setMarkerIcon@#@" + pIconURL + "~&~" + nWidth + "~&~" + nHeight);
     }
 
     /// <summary>
@@ -123,8 +185,8 @@ function createMarker(nLat, nLng, eMarkerType) {
     /// </summary>
     o.setPosition = function (nLat, nLng) {
 
-        console.log("MarkerMessage", o.nID + "~!~setPosition@#@" + nLat + "," + nLng);
-        SendUnityMessage("MarkerMessage", o.nID + "~!~setPosition@#@" + nLat + "," + nLng);
+        console.log("MarkerMessage", o.markerType + "~!~" + o.nID + "~!~setPosition@#@" + nLat + "," + nLng);
+        SendUnityMessage("MarkerMessage", o.markerType + "~!~" + o.nID + "~!~setPosition@#@" + nLat + "," + nLng);
 
     }
 
@@ -133,8 +195,8 @@ function createMarker(nLat, nLng, eMarkerType) {
     /// </summary>
     o.setEnable = function (bActive) {
 
-        console.log("MarkerMessage", o.nID + "~!~setEnable@#@" + bActive);
-        SendUnityMessage("MarkerMessage", o.nID + "~!~setEnable@#@" + bActive);
+        console.log("MarkerMessage", o.markerType + "~!~" + o.nID + "~!~setEnable@#@" + bActive);
+        SendUnityMessage("MarkerMessage", o.markerType + "~!~" + o.nID + "~!~setEnable@#@" + bActive);
     }
 
     /// <summary>
@@ -142,8 +204,8 @@ function createMarker(nLat, nLng, eMarkerType) {
     /// </summary>
     o.highlight = function (bActive) {
 
-        console.log("MarkerMessage", o.nID + "~!~highlight@#@" + bActive);
-        SendUnityMessage("MarkerMessage", o.nID + "~!~highlight@#@" + bActive);
+        console.log("MarkerMessage", o.markerType + "~!~" + o.nID + "~!~highlight@#@" + bActive);
+        SendUnityMessage("MarkerMessage", o.markerType + "~!~" + o.nID + "~!~highlight@#@" + bActive);
     }
 
     /// <summary>
@@ -151,8 +213,8 @@ function createMarker(nLat, nLng, eMarkerType) {
     /// </summary>
     o.blink = function (bActive) {
 
-        console.log("MarkerMessage", o.nID + "~!~blink@#@" + bActive);
-        SendUnityMessage("MarkerMessage", o.nID + "~!~blink@#@" + bActive);
+        console.log("MarkerMessage", o.markerType + "~!~" + o.nID + "~!~blink@#@" + bActive);
+        SendUnityMessage("MarkerMessage", o.markerType + "~!~" + o.nID + "~!~blink@#@" + bActive);
     }
 
     /// <summary>
@@ -160,16 +222,16 @@ function createMarker(nLat, nLng, eMarkerType) {
     /// </summary>
     o.zoom = function (nDistance) {
 
-        console.log("MarkerMessage", o.nID + "~!~zoom@#@" + nDistance);
-        SendUnityMessage("MarkerMessage", o.nID + "~!~zoom@#@" + nDistance);
+        console.log("MarkerMessage", o.markerType + "~!~" + o.nID + "~!~zoom@#@" + nDistance);
+        SendUnityMessage("MarkerMessage", o.markerType + "~!~" + o.nID + "~!~zoom@#@" + nDistance);
     }
 
     /// <summary>
     /// 移除。
     /// </summary>
     o.remove = function () {
-        console.log("MarkerMessage", o.nID + "~!~remove@#@0");
-        SendUnityMessage("MarkerMessage", o.nID + "~!~remove@#@0");
+        console.log("MarkerMessage", o.markerType + "~!~" + o.nID + "~!~remove@#@0");
+        SendUnityMessage("MarkerMessage", o.markerType + "~!~" + o.nID + "~!~remove@#@0");
 		
 		aMarkerArray.forEach(function(item, index, arr) {
 			if(item.nID == o.nID) {
@@ -183,8 +245,8 @@ function createMarker(nLat, nLng, eMarkerType) {
     /// 设置显示隐藏(参数为："true|false")。
     /// </summary>
     o.visible = function (bActive) {
-        console.log("MarkerMessage", o.nID + "~!~visible@#@" + bActive);
-        SendUnityMessage("MarkerMessage", o.nID + "~!~visible@#@" + bActive);
+        console.log("MarkerMessage", o.markerType + "~!~" + o.nID + "~!~visible@#@" + bActive);
+        SendUnityMessage("MarkerMessage", o.markerType + "~!~" + o.nID + "~!~visible@#@" + bActive);
     }
 
     /// <summary>
@@ -193,8 +255,8 @@ function createMarker(nLat, nLng, eMarkerType) {
     /// <param name="pStr"></param>
     o.setMinimumZoomVisible = function (nDistance) {
 
-        console.log("MarkerMessage", o.nID + "~!~setMinimumZoomVisible@#@" + nDistance);
-        SendUnityMessage("MarkerMessage", o.nID + "~!~setMinimumZoomVisible@#@" + nDistance);
+        console.log("MarkerMessage", o.markerType + "~!~" + o.nID + "~!~setMinimumZoomVisible@#@" + nDistance);
+        SendUnityMessage("MarkerMessage", o.markerType + "~!~" + o.nID + "~!~setMinimumZoomVisible@#@" + nDistance);
     }
 
     /// <summary>
@@ -202,8 +264,8 @@ function createMarker(nLat, nLng, eMarkerType) {
     /// </summary>
     o.setMaximumZoomVisible = function (nDistance) {
 
-        console.log("MarkerMessage", o.nID + "~!~setMaximumZoomVisible@#@" + nDistance);
-        SendUnityMessage("MarkerMessage", o.nID + "~!~setMaximumZoomVisible@#@" + nDistance);
+        console.log("MarkerMessage", o.markerType + "~!~" + o.nID + "~!~setMaximumZoomVisible@#@" + nDistance);
+        SendUnityMessage("MarkerMessage", o.markerType + "~!~" + o.nID + "~!~setMaximumZoomVisible@#@" + nDistance);
     }
 
     /// <summary>
@@ -212,8 +274,8 @@ function createMarker(nLat, nLng, eMarkerType) {
     /// <param name="pStr"></param>
     o.setMinimizeIcon = function (pColor) {
 
-        console.log("MarkerMessage", o.nID + "~!~setMinimizeIcon@#@" + pColor);
-        SendUnityMessage("MarkerMessage", o.nID + "~!~setMinimizeIcon@#@" + pColor);
+        console.log("MarkerMessage", o.markerType + "~!~" + o.nID + "~!~setMinimizeIcon@#@" + pColor);
+        SendUnityMessage("MarkerMessage", o.markerType + "~!~" + o.nID + "~!~setMinimizeIcon@#@" + pColor);
     }
 
     /// <summary>
@@ -221,26 +283,110 @@ function createMarker(nLat, nLng, eMarkerType) {
     /// </summary>
     o.setBackground = function (pColor) {
 
-        console.log("MarkerMessage", o.nID + "~!~setBackground@#@" + pColor);
-        SendUnityMessage("MarkerMessage", o.nID + "~!~setBackground@#@" + pColor);
+        console.log("MarkerMessage", o.markerType + "~!~" + o.nID + "~!~setBackground@#@" + pColor);
+        SendUnityMessage("MarkerMessage", o.markerType + "~!~" + o.nID + "~!~setBackground@#@" + pColor);
+    }      
+ 
+    /// <summary>
+    /// 关闭面板
+    /// </summary>
+    o.closePanel = function () {
+
+        console.log("MarkerMessage", o.markerType + "~!~" + o.nID + "~!~closePanel@#@");
+        SendUnityMessage("MarkerMessage", o.markerType + "~!~" + o.nID + "~!~closePanel@#@");
     }
 
     /// <summary>
+    /// 打开面板
+    /// </summary>
+    o.showPanel = function () {
+
+        console.log("MarkerMessage", o.markerType + "~!~" + o.nID + "~!~openPanel@#@");
+        SendUnityMessage("MarkerMessage", o.markerType + "~!~" + o.nID + "~!~openPanel@#@");
+    }
+
+    //为不同类型的标识分配不同的方法
+    switch (eMarkerType) {
+        case MarkerType.FieldOfficer:
+            break;
+        case MarkerType.Robot:
+            break;
+        case MarkerType.Drone:
+            break;
+        case MarkerType.CCTV:
+            // 设置摄像头路径
+            o.setCameraURL = function (pStr) {
+
+                console.log("MarkerMessage", o.markerType + "~!~" + o.nID + "~!~setCameraURL@#@" + pStr);
+                SendUnityMessage("MarkerMessage", o.markerType + "~!~" + o.nID + "~!~setCameraURL@#@" + pStr);
+            }
+            break;
+        case MarkerType.GTPoints:
+            break;
+        case MarkerType.Incidents:
+            break;
+        case MarkerType.Events:
+            break;
+        case MarkerType.Kiosk:
+            break;
+        case MarkerType.Traffic:
+
+            /// <summary>
+            /// 设置图标上的车辆图片（参数为全路径"http://xxx.jpg"）。
+            /// </summary>
+            o.setVehicleIcon = function (pIconURL) {
+                console.log("MarkerMessage", o.markerType + "~!~" + o.nID + "~!~setVehicleIcon@#@" + pIconURL);
+                SendUnityMessage("MarkerMessage", o.markerType + "~!~" + o.nID + "~!~setVehicleIcon@#@" + pIconURL);
+            }
+
+            // 设置面板需要的信息
+            o.setPanelInfo = function (pStr) {
+
+                console.log("MarkerMessage", o.markerType + "~!~" + o.nID + "~!~setPanelInfo@#@" + pStr);
+                SendUnityMessage("MarkerMessage", o.markerType + "~!~" + o.nID + "~!~setPanelInfo@#@" + pStr);
+            }
+            break;
+        case MarkerType.Weather:
+            break;
+        case MarkerType.Duress:
+            break;
+    }
+
+    o.eventCenter = new EventCenter();
+    /// <summary>
     /// 添加点击事件。(参数为："LEFT CLICK|RIGHT CLICK|HOVER|TOUCH"）。
     /// </summary>
-    o.addListener = function (pCommand, pFunctionName) {
+    o.addListener = function (pType, pFunctionName) {
 
-        console.log("MarkerMessage", o.nID + "~!~addListener@#@" + pCommand + "," + pFunctionName);
-        SendUnityMessage("MarkerMessage", o.nID + "~!~addListener@#@" + pCommand + "," + pFunctionName);
+        switch (pType) {
+            case "onclick":
+                o.eventCenter.addListener('onclick', pFunctionName);
+                break;
+            case "onenter":
+                o.eventCenter.addListener('onenter', pFunctionName);
+                break;
+            case "onexit":
+                o.eventCenter.addListener('onexit', pFunctionName);
+                break;
+        }
     }
 
     /// <summary>
     /// 移除点击事件。(参数为："LEFT CLICK|RIGHT CLICK|HOVER|TOUCH"）。。
     /// </summary>
-    o.removeListener = function (pFunctionName) {
-        console.log("MarkerMessage", o.nID + "~!~removeListener@#@" + pFunctionName);
+    o.removeListener = function (pType, pFunctionName) {
 
-        SendUnityMessage("MarkerMessage", o.nID + "~!~removeListener@#@" + pFunctionName);
+        switch (pType) {
+            case "onclick":
+                o.eventCenter.removeListener('onclick', pFunctionName);
+                break;
+            case "onenter":
+                o.eventCenter.removeListener('onenter', pFunctionName);
+                break;
+            case "onexit":
+                o.eventCenter.removeListener('onexit', pFunctionName);
+                break;
+        }
     }
 
     aMarkerArray.push(o);
