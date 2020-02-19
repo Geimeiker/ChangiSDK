@@ -9,36 +9,34 @@ var BuildingID = {
 
     T4: 4,
 
-    Jewel: 5
+    Jewel: 5,
 };
-var Map = createMap();
-//地图。
-function createMap() {
-    var o = new Object();
 
-    /// <summary>
-    /// 设置文字显示(参数为"100,1.004,3.002")
-    /// 文字位置为下中上。
-    /// </summary>
-    o.init = function (nDistance, nLat, nLng) {
+function Map() { };
 
-        //console.log("MapInit", nDistance + "," + nLat + "," + nLong);
-        SendUnityMessage("MapInit", nDistance + "," + nLat + "," + nLng);
-    }
+/// <summary>
+/// 设置文字显示(参数为"100,1.004,3.002")
+/// 文字位置为下中上。
+/// </summary>
+Map.init = function (nLat, nLng, nDistance) {
 
-    /// <summary>
-    /// 设置图标图片。
-    /// </summary>
-    o.home = function () {
-        SendUnityMessage("MapHome");
-    }
+    //console.log("MapInit", nDistance + "," + nLat + "," + nLong);
+    SendUnityMessage("MapInit", nLat + "," + nLng + "," + nDistance);
+}
 
-    //进入内景
-    o.goInDoor = function (buildingID) {
-        SendUnityMessage("GoInDoor", buildingID);
-    }
-    
-    return o;
+/// <summary>
+/// 设置图标图片。
+/// </summary>
+Map.home = function () {
+    SendUnityMessage("MapHome");
+}
+
+/// <summary>
+/// 进入内景。
+/// </summary>
+Map.goInDoor = function (buildingID) {
+    console.log(buildingID);
+    SendUnityMessage("GoInDoor", buildingID);
 }
 
 

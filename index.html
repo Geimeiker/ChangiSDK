@@ -463,7 +463,8 @@
 
 
 		var pMarker;
-
+        var pPath;
+        var aaa = "fasdfasdfasd";
 		///测试代码：
 		document.onkeydown = function (event) {
 			console.log('你按下了' + String.fromCharCode(event.keyCode)); 11
@@ -472,11 +473,12 @@
 					//按下小数字键盘1
 					//CameraScroll('10');
                     pMarker = createMarker(1.361256, 104.000, MarkerType.Traffic);
+                    pMarker.addListener('onclick', function () { alert("aaa"); });
 					break;
 				case 'b':
 					//按下小数字键盘2
                     pMarker.setPosition(1.36059, 103.988);
-                    pMarker.addListener('onclick', function () { console.log("点击点击------"); });
+             
 					break;
 
 				case 'c':
@@ -506,7 +508,7 @@
 					//按下小数字键盘7
 					//var tempJson = JSON.parse('[{"id":"5_1_44574","src":"http://localhost/dcimsdkst/project/icon_data/icon/heating.png"},{"id":"5_1_45086","src":"http://localhost/dcimsdkst/project/icon_data/icon/heating.png"}]');
 					//SetNodeStatue(tempJson, 'null', '', '');
-					Map.init(10, 1.36059, 103.988);
+					Map.init(1.36059, 103.988, 10);
 					break;
 				case 'h':
 					//按下小数字键盘8
@@ -515,8 +517,8 @@
 					break;
 				case 'i':
 					//按下小数字键盘9
-					//LoadExcel('project/3DSimulatorTask_Data/3DSimulatorTask.xlsx');
-					Map.go
+                    //LoadExcel('project/3DSimulatorTask_Data/3DSimulatorTask.xlsx');
+                    Map.goInDoor(BuildingID.T1);
 					break;
 			}
 		};
