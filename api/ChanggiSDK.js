@@ -43,7 +43,6 @@ Map.goInDoor = function (buildingID) {
 
 
 
-
 //自定义事件
 function EventCenter() {
     this.handlers = {}
@@ -313,10 +312,10 @@ function createMarker(nLat, nLng, eMarkerType) {
             break;
         case MarkerType.CCTV:
             // 设置摄像头路径
-            o.setCameraURL = function (pStr) {
+            o.setCameraURL = function (pCameraURL) {
 
-                console.log("MarkerMessage", o.markerType + "~!~" + o.nID + "~!~setCameraURL@#@" + pStr);
-                SendUnityMessage("MarkerMessage", o.markerType + "~!~" + o.nID + "~!~setCameraURL@#@" + pStr);
+                console.log("MarkerMessage", o.markerType + "~!~" + o.nID + "~!~setCameraURL@#@" + pCameraURL);
+                SendUnityMessage("MarkerMessage", o.markerType + "~!~" + o.nID + "~!~setCameraURL@#@" + pCameraURL);
             }
             break;
         case MarkerType.GTPoints:
@@ -338,10 +337,10 @@ function createMarker(nLat, nLng, eMarkerType) {
             }
 
             // 设置面板需要的信息
-            o.setPanelInfo = function (pStr) {
+            o.setPanelInfo = function (pJsonURL) {
 
-                console.log("MarkerMessage", o.markerType + "~!~" + o.nID + "~!~setPanelInfo@#@" + pStr);
-                SendUnityMessage("MarkerMessage", o.markerType + "~!~" + o.nID + "~!~setPanelInfo@#@" + pStr);
+                console.log("MarkerMessage", o.markerType + "~!~" + o.nID + "~!~setPanelInfo@#@" + pJsonURL);
+                SendUnityMessage("MarkerMessage", o.markerType + "~!~" + o.nID + "~!~setPanelInfo@#@" + pJsonURL);
             }
             break;
         case MarkerType.Weather:

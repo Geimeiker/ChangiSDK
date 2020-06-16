@@ -466,19 +466,20 @@
         var pPath;
         var aaa = "fasdfasdfasd";
 		///测试代码：
-		document.onkeydown = function (event) {
-			console.log('你按下了' + String.fromCharCode(event.keyCode)); 11
-			switch (String.fromCharCode(event.keyCode)) {
-				case 'a':
+        document.onkeydown = function (event) {
+            console.log('你按下了' + String.fromCharCode(event.keyCode) + event.keyCode);
+			switch (event.keyCode) {
+				case 65:
 					//按下小数字键盘1
 					//CameraScroll('10');
-                    pMarker = createMarker(1.361256, 104.000, MarkerType.Traffic);
-                    pMarker.addListener('onclick', function () { alert("aaa"); });
+                    pMarker = createMarker(1.361256, 104.000, MarkerType.CCTV);
+                    pMarker.addListener('onclick', function () { pMarker.showPanel(); });
+
 					break;
-				case 'b':
+				case 'a':
 					//按下小数字键盘2
-                    pMarker.setPosition(1.36059, 103.988);
-             
+                    //pMarker.setPosition(1.36059, 103.988);
+
 					break;
 
 				case 'c':
