@@ -34,11 +34,15 @@ Map.home = function () {
 /// <summary>
 /// 进入内景。
 /// </summary>
-Map.goInDoor = function (buildingID) {
+Map.goIntoInterior = function (buildingID) {
     console.log(buildingID);
-    SendUnityMessage("GoInDoor", buildingID);
+    SendUnityMessage("GoInDoor", buildingID + '');
 }
 
+Map.backToExterior = function () {
+    console.log("backToExterior");
+    SendUnityMessage("GoOutDoor");
+}
 
 
 
@@ -98,7 +102,7 @@ var MarkerType = {
 
     Weather: 10,
 
-    Duress: 11,
+    Duress: 11
 
 };
 

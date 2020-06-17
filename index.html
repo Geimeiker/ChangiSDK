@@ -469,47 +469,46 @@
         document.onkeydown = function (event) {
             console.log('你按下了' + String.fromCharCode(event.keyCode) + event.keyCode);
 			switch (event.keyCode) {
-				case 65:
-					//按下小数字键盘1
+				case 90:
+					//按下Z
 					//CameraScroll('10');
-                    pMarker = createMarker(1.361256, 104.000, MarkerType.CCTV);
+					pMarker = createMarker(1.361256, 104.000, MarkerType.CCTV);
                     pMarker.addListener('onclick', function () { pMarker.showPanel(); });
 
 					break;
-				case 'a':
-					//按下小数字键盘2
-                    //pMarker.setPosition(1.36059, 103.988);
-
+				case 88:
+					//按下X
+                    pMarker.setPosition(1.36059, 103.988);
+                    pMarker.setDisplay('SDS12ada', '18', '#ff0000', 'Bottom');
 					break;
 
-				case 'c':
-					//按下小数字键盘3
-					pMarker.setDisplay('SDS12ada', '18', '#ff0000', 'Bottom');
+				case 67:
+					//按下C
+					pMarker.setEnable(true);
 					break;
 
-				case 'd':
+				case 86:
+					//按下V
 					pMarker.setEnable(false);
 					break;
 
-				case 'e':
-					//按下小数字键盘5
-					pMarker.highlight(true);
+				case 66:
+					//按下B
+					pMarker.blink(true);
 					pMarker.setMarkerIcon('https://dss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2453488943,2804257221&fm=26&gp=0.jpg');
 					break;
 
-				case 'f':
-					//按下小数字键盘6
-					//JumpLayer(1,0);
-					//JumpLayerByHYID('00010003,000100030001');
-					pMarker.highlight(false);
-					pMarker.blink(false);
+				case 78:
+					//按下N
+					//pMarker.highlight(false);
+					//pMarker.blink(false);
+					Map.backToExterior();
 					break;
 
-				case 'g':
-					//按下小数字键盘7
-					//var tempJson = JSON.parse('[{"id":"5_1_44574","src":"http://localhost/dcimsdkst/project/icon_data/icon/heating.png"},{"id":"5_1_45086","src":"http://localhost/dcimsdkst/project/icon_data/icon/heating.png"}]');
-					//SetNodeStatue(tempJson, 'null', '', '');
-					Map.init(1.36059, 103.988, 10);
+				case 77:
+					//按下M
+					//Map.init(1.36059, 103.988, 10);
+                    Map.goIntoInterior(BuildingID.T1);
 					break;
 				case 'h':
 					//按下小数字键盘8
@@ -519,7 +518,7 @@
 				case 'i':
 					//按下小数字键盘9
                     //LoadExcel('project/3DSimulatorTask_Data/3DSimulatorTask.xlsx');
-                    Map.goInDoor(BuildingID.T1);
+                    
 					break;
 			}
 		};
